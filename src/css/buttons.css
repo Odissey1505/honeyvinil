@@ -1,0 +1,33 @@
+/* buttons.css */
+
+/* Базові стилі для кнопок */
+
+.btn {
+    display: inline-block;
+    background-color: #f9c74f;
+    /* Медовий колір */
+    color: #4b3832;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Ефект hover для кнопок */
+.btn:hover {
+    background-color: #f9844a;
+    /* Персиковий колір */
+    transform: scale(1.05);
+    /* Легке збільшення кнопки */
+    color: #4b3832;
+}
+
+/* Спеціальна кнопка на головній сторінці */
+.hero-btn {
+    margin-top: 20px;
+}

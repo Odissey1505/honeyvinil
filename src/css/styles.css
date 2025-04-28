@@ -1,0 +1,46 @@
+@import url('reset.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('buttons.css');
+@import url('home.css');
+@import url('about.css');
+@import url('menu.css');
+@import url('gallery.css');
+@import url('contacts.css');
+@import url('responsive.css');
+
+/* === Глобальний padding після фіксованої шапки === */
+.hero,
+.about-section,
+.menu-section,
+.gallery-page,
+.contact-section {
+    padding-top: 80px;
+}
+
+/* === Анімація fade-in для секцій === */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Анімація масштабування сайту при відкритті меню === */
+.site-content {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.site-content.blurred {
+    transform: scale(1.05);
+    filter: blur(2px);
+}
+
+/* === Плавний скрол сторінки для якорів === */
+html {
+    scroll-behavior: smooth;
+}

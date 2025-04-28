@@ -1,0 +1,80 @@
+.menu-section {
+    padding: 60px 20px;
+    background-color: #fff8f0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.menu-section h3 {
+    font-size: 28px;
+    color: #a68a64;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-section h3::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: #f9844a;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-section ul li {
+    padding: 10px 0;
+    font-size: 20px;
+    border-bottom: 1px dashed #a68a64;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-section ul li:hover {
+    background-color: #fff0db;
+    color: #a65f3e;
+}
+
+.menu-image {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.menu-image:hover {
+    transform: scale(1.05);
+}
+
+.coffee {
+    background-image: url('../images/coffee1.jpg');
+}
+
+.cake {
+    background-image: url('../images/cake1.jpg');
+}

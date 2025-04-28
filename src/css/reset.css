@@ -1,0 +1,102 @@
+/* reset.css */
+
+/* Обнулення базових стилів браузера */
+
+/* Box sizing для всіх елементів */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Обнулення маргінів і паддінгів */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Обнулення списків */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Базові налаштування для тіла */
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    background-color: #fff8f0;
+    color: #4b3832;
+}
+
+/* Обнулення лінків */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Зображення та медіа */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Таблиці */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Форми */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Зняття стилів кнопок */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Обнулення дефолтних стилів quotation */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+}
+
+/* Плавний скрол */
+html {
+    scroll-behavior: smooth;
+}
