@@ -21,6 +21,27 @@ header.hide {
     transform: translateY(-100%);
 }
 
+/* Контейнер для логотипа та назви */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Відстань між логотипом та текстом */
+}
+
+.logo {
+    width: 50px;
+    /* Встановити відповідний розмір для логотипа */
+    height: auto;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4b3832;
+}
+
 /* Navbar */
 .navbar {
     display: flex;

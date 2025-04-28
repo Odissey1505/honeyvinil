@@ -59,14 +59,105 @@
     font-size: 20px;
 }
 
-.top-desserts {
-    padding: 40px 20px;
-    text-align: center;
+/* Стилі для контейнера з картинками */
+.advantages-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Розрив між картинками */
+    margin-top: 30px;
 }
 
-.dessert-caption {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #4b3832;
+/* Стилі для кожної картинки */
+.adv-item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.adv-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Щоб зображення добре масштабувалось */
+    border-radius: 10px;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+    .advantages-images {
+        flex-direction: column;
+    }
+}
+
+/* Стилі для секції десертів */
+.top-desserts {
+    padding: 60px 20px;
     text-align: center;
+    background-color: #fff8f0;
+}
+
+.top-desserts h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Стилі для галереї десертів */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    /* Вирівнює елементи по центру */
+    margin-top: 30px;
+}
+
+/* Стилі для кожного десерту */
+.gallery-item {
+    position: relative;
+    width: 250px;
+    /* Фіксована ширина картинок */
+    height: 250px;
+    /* Фіксована висота картинок */
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Текст розміщується внизу */
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Зберігає правильні пропорції картинок */
+}
+
+/* Текст на картинках */
+.dessert-caption {
+    position: absolute;
+    bottom: 10px;
+    /* Текст розміщується від нижнього краю */
+    left: 0;
+    right: 0;
+    background: rgba(75, 56, 50, 0.7);
+    color: #fff8f0;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
 }

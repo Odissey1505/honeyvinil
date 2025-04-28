@@ -1,3 +1,5 @@
+/* === Стилізація для секції "Меню" === */
+
 .menu-section {
     padding: 60px 20px;
     background-color: #fff8f0;
@@ -57,24 +59,185 @@
     color: #a65f3e;
 }
 
-.menu-image {
-    background-size: cover;
-    background-position: center;
+/* === Слайдер для кави і десертів === */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider-item {
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+    /* Плавне перемикання */
+}
+
+.slider-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Стили для навігації слайдера */
+
+.slider .prev-button,
+.slider .next-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    width: 40px;
+    height: 40px;
+}
+
+.slider::before {
+    left: 10px;
+}
+
+.slider::after {
+    right: 10px;
+}
+
+/* Кнопка ліворуч */
+.slider .prev-button {
+    left: calc(50% - 200px);
+}
+
+/* Кнопка праворуч */
+.slider .next-button {
+    right: calc(50% - 200px);
+}
+
+.slider::before:hover,
+.slider::after:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Слайдер для кави */
+.coffee-slider .slider-item,
+.dessert-slider .slider-item {
+    width: 300px;
     height: 200px;
-    margin: 20px 0;
+    overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease;
 }
 
-.menu-image:hover {
-    transform: scale(1.05);
+/* === Слайдер для десертів === */
+.dessert-slider {
+    margin-top: 40px;
 }
 
-.coffee {
-    background-image: url('../images/coffee1.jpg');
+/* Слайдер на мобільних пристроях */
+@media (max-width: 768px) {
+    .slider-item {
+        width: 100%;
+        height: 150px;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
 }
 
-.cake {
-    background-image: url('../images/cake1.jpg');
+@media (max-width: 480px) {
+    .slider-item {
+        height: 130px;
+    }
+}
+
+/* Стили для кнопок перемикання слайдів */
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* === Слайдер для кави та десертів === */
+.coffee-slider .slider-item,
+.dessert-slider .slider-item {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+    .menu-section ul li {
+        font-size: 18px;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slider-item {
+        width: 100%;
+        height: 150px;
+    }
+
+    .menu-section {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-section ul li {
+        font-size: 16px;
+    }
+
+    .slider-item {
+        height: 130px;
+    }
+
+    .menu-section {
+        padding-top: 50px;
+    }
 }

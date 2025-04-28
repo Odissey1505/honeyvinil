@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <title>Меню | Мед&Ваніль</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
 
     <header>
         <nav class="navbar">
-            <div class="logo">Мед&Ваніль</div>
+            <!-- Логотип -->
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Мед&Ваніль" class="logo">
+                <div class="logo-text">Мед&Ваніль</div>
+            </div>
 
             <div class="hamburger">
                 <span></span>
@@ -26,8 +31,6 @@
                 <li><a href="gallery.html">Галерея</a></li>
                 <li><a href="contacts.html">Контакти</a></li>
             </ul>
-
-            <!-- Темний шар -->
             <div class="overlay"></div>
         </nav>
     </header>
@@ -38,7 +41,21 @@
             <h2>Наше меню</h2>
 
             <h3>Кава і напої</h3>
-            <div class="menu-image coffee"></div>
+            <div class="slider coffee-slider">
+                <div class="slider-item active">
+                    <img src="images/coffee1.jpg" alt="Coffee 1">
+                </div>
+                <div class="slider-item">
+                    <img src="images/coffee2.jpg" alt="Coffee 2">
+                </div>
+                <div class="slider-item">
+                    <img src="images/coffee3.jpg" alt="Coffee 3">
+                </div>
+                <!-- Кнопки для перемикання -->
+                <button class="prev-button">&#10094;</button>
+                <button class="next-button">&#10095;</button>
+            </div>
+
             <ul>
                 <li>Еспресо — 55 грн</li>
                 <li>Американо — 60 грн</li>
@@ -51,7 +68,21 @@
             </ul>
 
             <h3>Десерти</h3>
-            <div class="menu-image cake"></div>
+            <div class="slider dessert-slider">
+                <div class="slider-item active">
+                    <img src="images/dessert1.jpg" alt="Dessert 1">
+                </div>
+                <div class="slider-item">
+                    <img src="images/dessert2.jpg" alt="Dessert 2">
+                </div>
+                <div class="slider-item">
+                    <img src="images/dessert3.jpg" alt="Dessert 3">
+                </div>
+                <!-- Кнопки для перемикання -->
+                <button class="prev-button">&#10094;</button>
+                <button class="next-button">&#10095;</button>
+            </div>
+
             <ul>
                 <li>Чізкейк класичний — 95 грн</li>
                 <li>Макаруни (набір з 5 штук) — 130 грн</li>
@@ -65,12 +96,22 @@
 
     <footer>
         <p>© 2025 Мед&Ваніль. Всі права захищені.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon linkedin"><i
+                    class="fab fa-linkedin-in"></i></a>
+        </div>
     </footer>
 
     <script src="js/scroll-header.js"></script>
     <script src="js/active-link.js"></script>
     <script src="js/scroll-animations.js"></script>
     <script src="js/hamburger.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
