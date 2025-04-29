@@ -241,3 +241,106 @@
         padding-top: 50px;
     }
 }
+
+/* Стилі для секції "Замовлення тортів" */
+.order-cakes {
+    background-color: #fff8f0;
+    /* Світлий фон */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовок секції */
+.order-cakes h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #4b3832;
+}
+
+/* Параграфи */
+.order-cakes p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    color: #4b3832;
+}
+
+/* Виділення ключових слів */
+.order-cakes strong,
+.order-cakes mark {
+    color: #f9844a;
+    /* Помаранчевий колір для акцентів */
+    font-weight: bold;
+}
+
+/* Стилі для адаптивності */
+@media (max-width: 768px) {
+    .order-cakes {
+        padding: 40px 20px;
+    }
+
+    .order-cakes h2 {
+        font-size: 28px;
+    }
+
+    .order-cakes p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-cakes {
+        padding: 30px 15px;
+    }
+
+    .order-cakes h2 {
+        font-size: 24px;
+    }
+
+    .order-cakes p {
+        font-size: 16px;
+    }
+}
+
+/* Стилі для кнопки замовлення тортів */
+.order-cakes .order-button {
+    display: inline-block;
+    background-color: #f9c74f;
+    /* Медовий колір */
+    color: #4b3832;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+    /* Відступ від попереднього контенту */
+}
+
+/* Ефект hover для кнопки */
+.order-cakes .order-button:hover {
+    background-color: #f9844a;
+    /* Персиковий колір */
+    transform: scale(1.05);
+    /* Легке збільшення */
+    color: #4b3832;
+}

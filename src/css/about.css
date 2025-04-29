@@ -47,3 +47,68 @@
 .about-image:hover {
     transform: scale(1.05);
 }
+
+/* Стиль для статей */
+article {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fff0db;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+article:hover {
+    background-color: #f9c74f;
+    /* Легке підсвічування при наведенні */
+}
+
+/* Заголовки статей */
+article h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #4b3832;
+}
+
+/* Короткий текст статті */
+article .article-short {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4b3832;
+    margin-bottom: 15px;
+}
+
+/* Повний текст статті */
+article .article-full {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4b3832;
+    display: none;
+    /* Початково текст прихований */
+}
+
+/* Кнопка для розгортання */
+.toggle-btn {
+    background-color: #f9c74f;
+    color: #4b3832;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.toggle-btn:hover {
+    background-color: #f9844a;
+}
+
+/* Розділювач для статей */
+.article-divider {
+    margin-top: 30px;
+    height: 2px;
+    background-color: #4b3832;
+    width: 100%;
+    border: none;
+}
